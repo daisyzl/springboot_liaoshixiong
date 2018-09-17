@@ -54,6 +54,20 @@ public class HttpAspect {
 
     }
 
+    /*
+    运行结果
+2018-09-17 19:00:31.178  INFO 4944 --- [nio-8081-exec-1] com.imooc.aspect.HttpAspect              : url=http://127.0.0.1:8081/girls
+2018-09-17 19:00:31.178  INFO 4944 --- [nio-8081-exec-1] com.imooc.aspect.HttpAspect              : method=GET
+2018-09-17 19:00:31.178  INFO 4944 --- [nio-8081-exec-1] com.imooc.aspect.HttpAspect              : ip=127.0.0.1
+2018-09-17 19:00:31.179  INFO 4944 --- [nio-8081-exec-1] com.imooc.aspect.HttpAspect              : class_method=com.imooc.controller.GirlController.girlList
+2018-09-17 19:00:31.180  INFO 4944 --- [nio-8081-exec-1] com.imooc.aspect.HttpAspect              : args={}
+2018-09-17 19:00:31.180  INFO 4944 --- [nio-8081-exec-1] com.imooc.aspect.HttpAspect              : 1111111111
+2018-09-17 19:00:31.204  INFO 4944 --- [nio-8081-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: select girl0_.id as id1_0_, girl0_.age as age2_0_, girl0_.cup_size as cup_size3_0_ from girl girl0_
+2018-09-17 19:00:31.281  INFO 4944 --- [nio-8081-exec-1] com.imooc.aspect.HttpAspect              : 2222222222
+2018-09-17 19:00:31.281  INFO 4944 --- [nio-8081-exec-1] com.imooc.aspect.HttpAspect              : response=[Girl{id=1, cupSize='B', age=18}, Girl{id=2, cupSize='C', age=18}]
+     */
+
 //    @Before("execution(public * com.imooc.controller.GirlController.girlList(..))")
 //    public void log(){
 //        System.out.println("6666666666");
