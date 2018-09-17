@@ -4,8 +4,10 @@ import com.imooc.repository.GirlRepository;
 import com.imooc.domain.Girl;
 import com.imooc.service.GirlService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -41,7 +43,11 @@ public class GirlController {
     添加一个女生避免写入过多参数,单个属性换成对象
      */
     @PostMapping(value = "/girls/param")
-    public Girl girlAdd_Param(Girl girl) {
+    public Girl girlAdd_Param(@Valid Girl girl, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()){
+            System.out.println(bindingResult.getFieldError().getDefaultMessage());
+            return null;
+        }
 
         girl.setCupSize(girl.getCupSize());
         girl.setAge(girl.getAge());
