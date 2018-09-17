@@ -1,0 +1,7 @@
+server:
+  port: 8081
+girl:
+    cupSize: F
+    age: 18
+#将配置写到一个类里
+#通过yml配置，属性之后的：后一定要加空格
