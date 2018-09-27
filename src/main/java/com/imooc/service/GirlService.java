@@ -39,4 +39,8 @@ public class GirlService {
      }
 
     }
+    public Girl findOne(Integer id){
+        return girlRepository.findById(id).get();
+
+    }
 }
