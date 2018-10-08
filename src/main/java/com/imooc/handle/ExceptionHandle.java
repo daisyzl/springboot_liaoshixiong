@@ -9,11 +9,14 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+//对异常进行捕获
 @ControllerAdvice
 public class ExceptionHandle {
     private final static Logger logger= LoggerFactory.getLogger(ExceptionHandle.class);
+    //声明捕获哪种异常类
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
+    //返回json格式
     public Result handle(Exception e){
         if (e instanceof GirlException){
             GirlException girlException=(GirlException) e;

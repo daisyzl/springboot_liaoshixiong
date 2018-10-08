@@ -2,6 +2,7 @@ package com.imooc.enums;
 
 import javax.persistence.criteria.CriteriaBuilder;
 
+
 public enum ResultEnum {
     UNKNOW_ERROR(-1, "未知错误"),
     SUCCESS(0,"成功"),
